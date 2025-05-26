@@ -2,7 +2,7 @@ import {
   Whisper
 } from '../database.js'
 
-// Obtiene todos los whispers y reemplaza el campo 'author' (que es un ObjectId) 
+// Obtiene todos los whispers y reemplaza el campo 'author' (que es un ObjectId)
 // por el documento del usuario asociado, pero solo incluyendo el campo 'username'.
 const getAll = () => Whisper.find().populate('author', 'username')
 const getById = id => Whisper.findById({ _id: id }).populate('author', 'username')

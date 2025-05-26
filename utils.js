@@ -20,10 +20,10 @@ export function requireAuthentication (req, res, next) {
   }
   try {
     // Se extrae el token real del encabezado "Authorization", ignorando el prefijo "Bearer"
-    const accessToken = token.split(" ")[1];
-    const decoded = jwt.verify(accessToken, process.env.JWT_SECRET);
-    req.user = decoded.data;
-    next();
+    const accessToken = token.split(' ')[1]
+    const decoded = jwt.verify(accessToken, process.env.JWT_SECRET)
+    req.user = decoded.data
+    next()
   } catch (err) {
     res.status(401).json({ error: 'Invalid token' })
   }
