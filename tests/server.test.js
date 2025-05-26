@@ -1,7 +1,21 @@
+/*
 import supertest from 'supertest'
 import { app } from '../server'
 import { getById } from '../stores/whisper'
 import { restoreDb, populateDb, getFixtures, ensureDbConnection, normalize, closeDbConnection } from './utils.js'
+*/
+
+const supertest = require("supertest");
+const { app } = require("../server");
+const { getById } = require("../stores/whisper");
+const {
+  restoreDb,
+  populateDb,
+  getFixtures,
+  ensureDbConnection,
+  normalize,
+  closeDbConnection,
+} = require("./utils");
 
 let whispers
 let inventedId
