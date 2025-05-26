@@ -1,6 +1,9 @@
 export default {
   modulePathIgnorePatterns: ['<rootDir>/node_test/'],
   coveragePathIgnorePatterns: ['<rootDir>/tests/'],
-  transform: {},
+  transform: {
+    '^.+\\.js$': 'babel-jest'
+  },
+  extensionsToTreatAsEsm: ['.js'],
   testEnvironment: 'node'
 }
